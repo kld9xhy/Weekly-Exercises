@@ -7,18 +7,24 @@ int main(){
 	cout << "Enter N: ";
 	cin >> n;
     int count;
-    
+    cout << n << " = ";
     for(int i = 2; i <= n; ++i)
 	{
         count = 0;
-        while(n % i == 0){
+        while(n % i == 0)
+		{
             ++count;
             n /= i;
         }
         if(count){
             cout << i;
-            if(count > 1) cout << "^" << count;
-            if(n > i){
+            while (count > 1) 
+			{
+			cout << " * " << i;
+			count--;
+			}
+            if(n > i)
+			{
                 cout << " * ";
             }
         }
