@@ -28,6 +28,7 @@ bool is_b_contain_a(int a[], int n, int b[], int m)
 			}
         }
     }
+	return false;
 }
 
 int main()
