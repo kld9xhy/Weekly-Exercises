@@ -22,13 +22,14 @@ bool is_s1_a_substring_of_s2(string s1, int n, string s2, int m)
                     ++k;
                     if (k >= m) break;
                 }
+                if ((j == n - 1) && (s1[n - 1] == s2[k])) return true;
                 ++j;
                 ++k;
                 if ((m - k) < (n - j)) return false;
-                if (s1[n - 1] == s2[k]) return true;
 			}
         }
     }
+    return false;
 }
 
 int main()
