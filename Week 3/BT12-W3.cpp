@@ -21,14 +21,14 @@ bool is_b_contain_a(int a[], int n, int b[], int m)
                     ++k;
                     if (k >= m) break;
                 }
+                if ((j == n - 1) && a[j] == b[k]) return true;
                 ++j;
                 ++k;
                 if ((m - k) < (n - j)) return false;
-                if (a[n - 1] == b[k]) return true;
 			}
         }
     }
-	return false;
+    return false;
 }
 
 int main()
